@@ -6,8 +6,9 @@
 
 /*variables*/
 @linkColor: #cfb53b;
-
-
+@textColor: black;
+@headerFont: 'Alatsi', sans-serif;
+@regularFont: 'Roboto', sans-serif;
 
 
 /*mixins*/
@@ -35,6 +36,8 @@
 	flex-flow: row wrap;
 }
 
+
+/*reset*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -92,12 +95,18 @@ hr {
 	margin-right: auto;
 	border-style: inset;
 	border-width: 1px;
-	color: black;
+	color: @textColor;
 	width: 100%;
   }
 
+h1, h2, h3, h4, h5 {
+	font-family: @headerFont;
+	color: @textColor;
+}
+
 html, body {
-	font-family: 'Alatsi', sans-serif;
+	font-family: @regularFont;
+	color: @textColor;
 	width: 100%;
 	height: 100%;
 
@@ -188,6 +197,10 @@ html, body {
 
 		}
 
+		.largeLineBreak {
+			display: none;
+		}
+
 		.workHistory {
 			.flexColumnNW();
 			width: 90%;
@@ -229,6 +242,7 @@ html, body {
 		.mainContent {
 			padding: 0 -2% 0 -2%;
 			align-items: flex-start;
+			justify-content: center;
 			.flexRowW();
 			.about {
 				width: 48%;
@@ -238,8 +252,14 @@ html, body {
 				width: 48%;
 				padding: 3% 2% 2% 2%;
 			}
-
-
+			.largeLineBreak {
+				display: block;
+			}
+			.workHistory {
+				width: 100%;
+				padding: 3% 1% 2% 4%;
+			}
+			
 		}	
 	}
 

@@ -22,6 +22,7 @@
   display: flex;
   flex-flow: row wrap;
 }
+/*reset*/
 html,
 body,
 div,
@@ -161,9 +162,18 @@ hr {
   color: black;
   width: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Alatsi', sans-serif;
+  color: black;
+}
 html,
 body {
-  font-family: 'Alatsi', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: black;
   width: 100%;
   height: 100%;
 }
@@ -243,6 +253,9 @@ body {
 .container .mainContent .skills .skillsList li {
   padding-bottom: 12%;
 }
+.container .mainContent .largeLineBreak {
+  display: none;
+}
 .container .mainContent .workHistory {
   display: flex;
   flex-flow: column nowrap;
@@ -277,6 +290,7 @@ body {
   .container .mainContent {
     padding: 0 -2% 0 -2%;
     align-items: flex-start;
+    justify-content: center;
     display: flex;
     flex-flow: row wrap;
   }
@@ -287,6 +301,13 @@ body {
   .container .mainContent .skills {
     width: 48%;
     padding: 3% 2% 2% 2%;
+  }
+  .container .mainContent .largeLineBreak {
+    display: block;
+  }
+  .container .mainContent .workHistory {
+    width: 100%;
+    padding: 3% 1% 2% 4%;
   }
 }
 @media (min-width: 1200px) {
