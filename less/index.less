@@ -4,6 +4,37 @@
    License: none (public domain)
 */
 
+/*variables*/
+@linkColor: #cfb53b;
+
+
+
+
+/*mixins*/
+.navLinks {
+	:hover {
+		cursor: pointer;
+		font-size: 1.15rem;
+		font-style: italic;
+		color: @linkColor;
+	}
+}
+
+.flexColumnNW {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.flexRowNW {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.flexRowW {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +84,180 @@ table {
     box-sizing: border-box;
 }
 
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+	color: black;
+	width: 100%;
+  }
+
 html, body {
-    height: 100%;
+	font-family: 'Alatsi', sans-serif;
+	width: 100%;
+	height: 100%;
+
+}
+
+.container {
+	.flexColumnNW();
+	border-color: steelblue;
+	background-color: whitesmoke;
+	height: 100%;
+
+	h1 {
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+	}	
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	h3 {
+		font-size: 1.15rem;
+		font-weight: 300;
+
+	}
+
+	h4 {
+		font-size: 1.05rem;
+		font-weight: 250;
+	}
+	
+
+	header {
+		margin-top: 1%;
+		width: 100%;
+		.flexColumnNW();
+
+		
+
+		nav {
+			width: 100%;
+			padding: 2% 1% 2% 1%;
+			.flexColumnNW();
+			align-items: center;
+			justify-content: space-between;
+			.navLinks();
+
+			a {
+				text-decoration: none;
+				margin: .5% 0 .5% 0;
+				color: black;
+				
+			}
+		
+
+		}
+	}
+	.mainContent {
+		.flexColumnNW();
+		width: 100%;
+		align-items: center;
+
+
+		.about {
+			width: 90%;
+			padding: 2% 0 2% 0;
+			text-align: justify;
+			line-height: 1.2rem;
+		}
+
+		.skills {
+			.flexColumnNW();
+			width: 90%;
+			padding: 5% 0 2% 0;
+			align-items: flex-start;
+			line-height: 1rem;
+
+			.skillsList {
+
+				list-style-type: disc;
+				list-style-position: inside;
+				li {
+					padding-bottom: 12%;
+				}
+			}
+
+		}
+
+		.workHistory {
+			.flexColumnNW();
+			width: 90%;
+			padding: 2% 1% 2% 1%;
+			text-align: left;
+			line-height: 1rem;
+
+			.jobsList {
+				list-style-type: none;
+
+				
+				p {
+					margin-left: 4%;
+					margin-bottom: 1%;
+				}
+					
+				
+			}		
+
+		}
+
+
+
+	}
+
+	@media (min-width: 500px) {
+		border-left-width: 5rem;
+		border-right-width: 5rem;
+		border-style: solid;
+		header nav {
+			flex-flow: .flexRowNW();
+		}
+	}
+
+	@media (min-width: 900px) {
+		border-left-width: 10rem;
+		border-right-width: 10rem;
+		border-style: solid;
+		.mainContent {
+			padding: 0 -2% 0 -2%;
+			align-items: flex-start;
+			.flexRowW();
+			.about {
+				width: 48%;
+				padding: 2% 2% 2% 2%;
+			}
+			.skills {
+				width: 48%;
+				padding: 3% 2% 2% 2%;
+			}
+
+
+		}	
+	}
+
+
+	@media (min-width: 1200px) {
+		border-left-width: 15rem;
+		border-right-width: 15rem;
+		border-style: solid;	
+	}
+
+	@media (min-width: 1800px) {
+		border-left-width: 20rem;
+		border-right-width: 20rem;
+		border-style: solid;	
+	}
+
+
+
+
 }
 

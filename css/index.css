@@ -1,1 +1,305 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*variables*/
+/*mixins*/
+.navLinks :hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #cfb53b;
+}
+.flexColumnNW {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.flexRowNW {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.flexRowW {
+  display: flex;
+  flex-flow: row wrap;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  color: black;
+  width: 100%;
+}
+html,
+body {
+  font-family: 'Alatsi', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  border-color: steelblue;
+  background-color: whitesmoke;
+  height: 100%;
+}
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.container h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.container h3 {
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+.container h4 {
+  font-size: 1.05rem;
+  font-weight: 250;
+}
+.container header {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.container header nav {
+  width: 100%;
+  padding: 2% 1% 2% 1%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container header nav :hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #cfb53b;
+}
+.container header nav a {
+  text-decoration: none;
+  margin: 0.5% 0 0.5% 0;
+  color: black;
+}
+.container .mainContent {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+}
+.container .mainContent .about {
+  width: 90%;
+  padding: 2% 0 2% 0;
+  text-align: justify;
+  line-height: 1.2rem;
+}
+.container .mainContent .skills {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  padding: 5% 0 2% 0;
+  align-items: flex-start;
+  line-height: 1rem;
+}
+.container .mainContent .skills .skillsList {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.container .mainContent .skills .skillsList li {
+  padding-bottom: 12%;
+}
+.container .mainContent .workHistory {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  padding: 2% 1% 2% 1%;
+  text-align: left;
+  line-height: 1rem;
+}
+.container .mainContent .workHistory .jobsList {
+  list-style-type: none;
+}
+.container .mainContent .workHistory .jobsList p {
+  margin-left: 4%;
+  margin-bottom: 1%;
+}
+@media (min-width: 500px) {
+  .container {
+    border-left-width: 5rem;
+    border-right-width: 5rem;
+    border-style: solid;
+  }
+  .container header nav {
+    flex-flow: [object Object],[object Object];
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    border-left-width: 10rem;
+    border-right-width: 10rem;
+    border-style: solid;
+  }
+  .container .mainContent {
+    padding: 0 -2% 0 -2%;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .container .mainContent .about {
+    width: 48%;
+    padding: 2% 2% 2% 2%;
+  }
+  .container .mainContent .skills {
+    width: 48%;
+    padding: 3% 2% 2% 2%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    border-left-width: 15rem;
+    border-right-width: 15rem;
+    border-style: solid;
+  }
+}
+@media (min-width: 1800px) {
+  .container {
+    border-left-width: 20rem;
+    border-right-width: 20rem;
+    border-style: solid;
+  }
+}
