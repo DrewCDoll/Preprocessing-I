@@ -7,6 +7,8 @@
 /*variables*/
 @linkColor: #cfb53b;
 @textColor: black;
+@borderColor: steelblue;
+@backgroundColor: whitesmoke;
 @headerFont: 'Alatsi', sans-serif;
 @regularFont: 'Roboto', sans-serif;
 
@@ -114,8 +116,8 @@ html, body {
 
 .container {
 	.flexColumnNW();
-	border-color: steelblue;
-	background-color: whitesmoke;
+	border-color: @borderColor;
+	background-color: @backgroundColor;
 	height: 100%;
 
 	h1 {
@@ -160,7 +162,6 @@ html, body {
 				text-decoration: none;
 				margin: .5% 0 .5% 0;
 				color: black;
-				
 			}
 		
 
@@ -221,10 +222,28 @@ html, body {
 			}		
 
 		}
+	}
 
+	.contactArea {
+		.flexColumnNW();
+		align-items: center;
+		padding-bottom: 4%;
 
+		.contactItems {
+			line-height: 2rem;
+			.flexColumnNW();
+			align-items: center;
+			.navLinks();
+
+			li a {
+				text-decoration: none;
+				color: @textColor;
+			}
+
+		}
 
 	}
+
 
 	@media (min-width: 500px) {
 		border-left-width: 5rem;
@@ -236,9 +255,12 @@ html, body {
 	}
 
 	@media (min-width: 900px) {
-		border-left-width: 10rem;
-		border-right-width: 10rem;
+		border-left-width: 15rem;
+		border-right-width: 15rem;
 		border-style: solid;
+		header nav {
+			.flexRowNW()
+		}
 		.mainContent {
 			padding: 0 -2% 0 -2%;
 			align-items: flex-start;
@@ -265,15 +287,16 @@ html, body {
 
 
 	@media (min-width: 1200px) {
-		border-left-width: 15rem;
-		border-right-width: 15rem;
+		border-left-width: 20rem;
+		border-right-width: 20rem;
 		border-style: solid;	
 	}
 
 	@media (min-width: 1800px) {
-		border-left-width: 20rem;
-		border-right-width: 20rem;
-		border-style: solid;	
+		border-left-width: 30rem;
+		border-right-width: 30rem;
+		border-style: solid;
+		
 	}
 
 

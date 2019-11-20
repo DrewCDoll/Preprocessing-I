@@ -271,6 +271,28 @@ body {
   margin-left: 4%;
   margin-bottom: 1%;
 }
+.container .contactArea {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-bottom: 4%;
+}
+.container .contactArea .contactItems {
+  line-height: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.container .contactArea .contactItems :hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #cfb53b;
+}
+.container .contactArea .contactItems li a {
+  text-decoration: none;
+  color: black;
+}
 @media (min-width: 500px) {
   .container {
     border-left-width: 5rem;
@@ -283,9 +305,13 @@ body {
 }
 @media (min-width: 900px) {
   .container {
-    border-left-width: 10rem;
-    border-right-width: 10rem;
+    border-left-width: 15rem;
+    border-right-width: 15rem;
     border-style: solid;
+  }
+  .container header nav {
+    display: flex;
+    flex-flow: row nowrap;
   }
   .container .mainContent {
     padding: 0 -2% 0 -2%;
@@ -312,15 +338,15 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    border-left-width: 15rem;
-    border-right-width: 15rem;
+    border-left-width: 20rem;
+    border-right-width: 20rem;
     border-style: solid;
   }
 }
 @media (min-width: 1800px) {
   .container {
-    border-left-width: 20rem;
-    border-right-width: 20rem;
+    border-left-width: 30rem;
+    border-right-width: 30rem;
     border-style: solid;
   }
 }
